@@ -16,12 +16,15 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <title>送信完了</title>
 </head>
 <body>
+    <div class="container text-center mt-5">
     <h1>お問い合わせありがとうございました！</h1>
-    <p><?php echo $nickname; ?></p>
-    <p><?php echo $email; ?></p>
-    <p><?php echo $content; ?></p>
+    <h3 class="mt-4"><?php echo $nickname; ?></h3>
+    <h3 class="mt-3"><?php echo $email; ?></h3>
+    <h3 class="mt-3"><?php echo $content; ?></h3>
+    </div>
 </body>
 </html>

@@ -17,7 +17,7 @@
     if ($nickname == '') {
         $nickname_result = 'ニックネームが入力されてないやん。';
     }else{
-        $nickname_result = 'Welcome,' . 'Mr.'. $nickname ; 
+        $nickname_result = 'Welcome,' .  $nickname ; 
     }
 
      if ($email == '') {
@@ -38,25 +38,28 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <title>入力内容確認</title>
 </head>
 <body>
-    <h1>入力内容確認</h1>
-    <p><?php echo $nickname_result; ?></p>
-    <p><?php echo $email_result; ?></p>
-    <p><?php echo $content_result; ?></p>
-    <form method="POST" action="thanks.php">
-        <input type="hidden" name="nickname" value="<?php echo $nickname?>">
-        <input type="hidden" name="email" value="<?php echo $email?>">
-        <input type="hidden" name="content" value="<?php echo $content?>">
-        <input type="button" value="戻る" onclick="history.back()">
-        <?php if ($email != '' && $nickname != '' && $content != '') ://コロン構文 ?>
-        <input type="submit" value="OK"> <!--処理-->
-        <?php endif; ?>
-    </form>
+    <div class="container text-center mt-5">
+        <h1>入力内容確認</h1>
+            <p class="mt-3"><?php echo $nickname_result; ?></p>
+            <p class="mt-3"><?php echo $email_result; ?></p>
+            <p class="mt-3"><?php echo $content_result; ?></p>
+            <form method="POST" action="thanks.php">
+                <input type="hidden" name="nickname" value="<?php echo $nickname?>">
+                <input type="hidden" name="email" value="<?php echo $email?>">
+                <input type="hidden" name="content" value="<?php echo $content?>">
+                <input type="button" value="戻る" class="btn btn-outline-info col-1 mt-3" onclick="history.back()">
+                <?php if ($email != '' && $nickname != '' && $content != '') ://コロン構文 ?>
+                    <input type="submit" value="OK" class="btn btn-outline-info col-1 mt-3"> <!--処理-->
+                <?php endif; ?>
+            </form>
+    </div>
 </body>
 </html>
-
+ 
 
 
 
