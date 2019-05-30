@@ -1,9 +1,17 @@
 <?php
+    //メソッドがGETの時はトップページにリダイレクト
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+        header('Location: index.html')  ;      
+    }
+
+    //関数の呼び出し,onceは一回だけ呼び出し
+    require_once('function.php');
 
     //スーパーグローバル関数：$_POST
-    $nickname = $_POST['nickname']; 
-    $email = $_POST['email'];
-    $content = $_POST{'content'};
+    // htmlspecialchars(string):特殊な文字をテキストに変換
+    $nickname = h($_POST['nickname']); 
+    $email = h($_POST['email']);
+    $content = h($_POST{'content'});
     // echo $nickname;
 
     if ($nickname == '') {
