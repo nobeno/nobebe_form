@@ -32,6 +32,7 @@
         $content_result = 'お問い合わせ内容:' . $content; 
     }
 
+
 ?>
 
 <!DOCTYPE html>
