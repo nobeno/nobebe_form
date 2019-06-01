@@ -7,10 +7,11 @@
     //DBと接続
     require_once('dbconnect.php');
 
-    $nickname = $_POST['nickname']; 
+    $id = $_POST['id']; 
+    $nickname = $_POST['nickname'];
 
-    $stmt = $dbh->prepare('DELETE FROM surveys WHERE  nickname = ?');
-    $stmt->execute([$nickname]); 
+    $stmt = $dbh->prepare('DELETE FROM surveys WHERE  id = ?');
+    $stmt->execute([$id]); 
 
 ?>
 

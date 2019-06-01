@@ -37,7 +37,7 @@
         <p><?php echo 'テキスト：' . h($result['content']); ?></p>
 
         <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-info" data-sample="<?php echo $result['nickname'] ?>" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-outline-info" data-id="<?php echo $result['id'] ?>" data-nickname="<?php echo $result['nickname']?>" data-toggle="modal" data-target="#exampleModal">
               削除
             </button>
 
@@ -53,13 +53,14 @@
                     </button>
                   </div>
                   <div class="modal-body">
-        
+                    <!-- テキスト挿入 -->
                   </div>
                   <div class="modal-footer">
                     <form action="delete.php" method="POST">
                     <!-- <input type="submit" value="削除" class="btn btn-outline-danger"> -->
                     <button type="submit" class="btn btn-outline-danger">削除</button>
-                    <input type="hidden" name="nickname" value="">
+                    <input type="hidden" class="sendid" name="id" value="">
+                    <input type="hidden" class="sendnickname" name="nickname" value="">
                     </form>
                     <button type="button" class="btn btn-outline-dark" data-dismiss="modal">戻る</button>
                   </div>
