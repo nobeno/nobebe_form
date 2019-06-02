@@ -35,15 +35,13 @@
   </nav>
 
 
-  <div class="split-box left-box">
-
-  </div>
+  <div class="split-box left-box"><!--左側画面--></div>
 
   <div class="split-box right-box">
-    <h3 class="mt-5">検索結果</h3>
+    <h3 class="mt-5 text-center">検索結果</h3>
     <div class="mt-5 ">
       <?php foreach ($results as $result): ?>
-        <div class="card mt-3 border-info" style="width: 18rem;">
+        <div class="card mt-3 border-info mx-auto" style="width: 18rem;">
           <div class="card-body">
             <p><?php echo 'ニックネーム：' . h($result['nickname']); ?></p>
             <p><?php echo 'メールアドレス：' . h($result['email']); ?></p>

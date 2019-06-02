@@ -20,13 +20,20 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>削除画面</title>
 </head>
 <body>
-    <h1><?php echo "{$nickname}の情報を削除しました。" ?></h1>
-    <form>
-         <input type="button" value="Back" class="btn btn-outline-info col-2 mt-5" onclick="location.href='search.php' ">
-    </form>
+    <div class="split-box left-box"><!--右側画面--></div>
+    
+    <div class="split-box right-box container">
+        <h1 class="mt-5"><?php echo "{$nickname}の情報を削除しました。" ?></h1>
+        <div class="row justify-content-center">
+        <form class="col-3">
+             <input type="button" value="Back" class="btn btn-outline-info  mt-5" onclick="location.href='search.php' ">
+        </form>
+        </div>
+    </div>
 
 </body>
 </html>

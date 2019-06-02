@@ -24,6 +24,7 @@ html,body{
     background-image: url(image/osusi.jpg);
     color: #fff;
     position: relative;
+    background-size: cover;
 }
 .split-left__inner{
     height: 100%;
