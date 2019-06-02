@@ -24,6 +24,9 @@
 </head>
 <body>
     <h1><?php echo "{$nickname}の情報を削除しました。" ?></h1>
+    <form>
+         <input type="button" value="Back" class="btn btn-outline-info col-2 mt-5" onclick="location.href='search.php' ">
+    </form>
 
 </body>
 </html>

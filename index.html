@@ -3,31 +3,50 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>お問い合わせ</title>
 </head>
 <body>
-	<div class="container mt-5">
-		<div class="row justify-content-center">
-			<h1>お問い合わせ情報入力</h1>
-		</div>
-		<form method="POST" action="check.php">
-			<div class="row mt-4">
-				<div class="col-3 offset-1 text-center">ニックネーム</div>
-				<input type="text" name="nickname" class="col-6 form-control" placeholder="name">
-			</div>
-			<div class="row mt-3">
-				<div class="col-3 offset-1 text-center">メールアドレス</div>
-				<input type="text" name="email" class="col-6 form-control" placeholder="exampl@email.com">
-			</div>
-			<div class="row mt-3">
-				<div class="col-3 offset-1 text-center">お問い合わせ</div>
-				<textarea name="content" class="col-6 form-control"></textarea>
-			</div>
-			<div class="row justify-content-center">
-			<input type="submit" name="送信" class="btn btn-info col-3 mt-5">
-			</div>
-		</form>
-	</div>
+	
+	<div class="split">
+		<div class="split-item split-left">
+			<div class="split-left__inner">
+				
+			</div><!--split-left__inner-->
+		</div><!--split-item split-left-->
+		
+		<div class="split-item split-right">
+			<div class="split-right__inner">
+
+
+				<div class="container mt-5">
+					<div class="row justify-content-center">
+						<h1>Contact form</h1>
+					</div>
+					<form method="POST" action="check.php">
+						<div class="row mt-4">
+							<div class="col-3  text-center">Name</div>
+							<input type="text" name="nickname" class="col-8 form-control border-info" placeholder="name">
+						</div>
+						<div class="row mt-3">
+							<div class="col-3  text-center">Email</div>
+							<input type="text" name="email" class="col-8 form-control border-info" placeholder="exampl@email.com">
+						</div>
+						<div class="row mt-4 mb-5">
+							<div class="col-3  text-center">Message</div>
+							<textarea name="content" class="col-8 form-control border-info"></textarea>
+						</div>
+						<div class="row justify-content-center negative">
+							<input type="submit" name="送信" class="btn btn-info btn-block mt-5">
+						</div>
+					</form>
+				</div>
+
+			</div><!--split-right__inner-->
+		</div><!--split-item split-right-->
+
+	</div><!--split-->
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

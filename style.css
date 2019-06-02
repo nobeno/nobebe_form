@@ -1,2 +1,84 @@
 @charset ="utf-8";
 
+.negative{
+/*	margin: 0 -500%;
+	padding: 0 -500%;*/
+	height: 100px;
+}
+
+html,body{
+	height: 100%;
+}
+
+.split{
+    display: table;
+    width: 100%;
+    height: 100%;    
+}
+.split-item{
+    display: table-cell;
+    padding: 80px;
+    width: 50%;
+}
+.split-left{
+    background-image: url(image/osusi.jpg);
+    color: #fff;
+    position: relative;
+}
+.split-left__inner{
+    height: 100%;
+    position: fixed;
+    width: 50%;
+}
+.split-right__inner{
+    height: 100%;
+}
+
+@media screen and (max-width:1024px) {
+    .split{
+        display: block;
+    }
+    .split-item{
+        display: block;
+        width: auto;
+    }
+    .split-left__inner{
+        position: inherit;
+        width: auto;
+    }
+}
+
+/*検索画面CSS*/
+.split-box{
+    position:absolute;
+    width:50%;
+    height:100%;
+    padding:1em;
+}
+ 
+.left-box {
+    left:0;
+    background-image: url(image/osusi.jpg);
+    color:#ffffff;
+}
+ 
+.right-box {
+    right:0;
+    overflow-y:scroll;
+    background:#ffffff;
+}
+ 
+.left-box a{
+    color:#ffffff;
+    display:block;
+}
+ 
+@media screen and (max-width:600px) { 
+    .split-box {
+        position:relative;
+        width:100%;
+        height:auto;
+ 
+    }
+}
+
